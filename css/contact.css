@@ -1,0 +1,660 @@
+
+
+
+/* Font face for local font */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/* Navigation styling */
+
+/* Desktop (default) view */
+.hamburger {
+    display: none; /* Hide hamburger on desktop */
+}
+
+.navigation {
+    background-image: url('../assets/pic-nine.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 130vh;
+    width: 100vw;
+    color: beige;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightgrey;
+    height: 90px;
+    padding: 0 20px;
+}
+
+.nav-logo img {
+    width: 120px; /* Fixed width for better scaling */
+    position: relative;
+    top: 25%;
+    left: 20%;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Spacing between links */
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-links ul li .active{
+    color: darkgrey;
+}
+
+.nav-button {
+    background-color: black;
+    width: 250px;
+    height: 45px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav-button h4 {
+    margin: 0;
+}
+
+.nav-btn{
+    background-color: white;
+    width: 35%;
+    text-align: center;
+    margin-top: 10%;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-bottom: 40px;
+    padding-right: 10px;
+}
+
+.nav-btn a{
+    color: #1C1C1C;
+    text-decoration: none;
+}
+
+
+/* Background content */
+.nav-background {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    background-color: #ED8A0A;
+    color: #1C1C1C;
+    width: 35%;
+}
+
+.nav-main{
+    padding-top: 100px; /* Adds space above the content */
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 100px; /* Adds space below the content */
+    
+}
+
+.nav-address h1 {
+    font-size: 3.4rem;
+    font-weight: 400;
+    line-height: 4rem;
+}
+
+.nav-text{
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.nav-text p{
+    margin-top: 10%;
+}
+
+.nav-num{
+    font-size: 3.2rem;
+    margin-top: 10%;
+}
+
+
+
+/* For tablets (screen width between 768px and 1024px) */
+@media (max-width: 1024px) {
+    .nav-background {
+        left: 50%;
+        transform: translateX(-50%); /* Center horizontally */
+        top: 20%;
+        width: 60%; /* Increase width to fit on tablet screens */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    .nav-main {
+        padding-top: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-bottom: 80px;
+    }
+
+    .nav-address h1 {
+        font-size: 2.5rem; /* Slightly smaller heading */
+        line-height: 3.2rem;
+    }
+
+    .nav-text {
+        font-size: 1.2rem;
+        margin-top: 8%; /* Adjust top margin */
+    }
+
+    .nav-num {
+        font-size: 2.5rem;
+        margin-top: 8%;
+    }
+}
+
+/* For mobile devices (screen width 767px and below) */
+@media (max-width: 767px) {
+    .nav-background {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15%;
+        width: 90%; /* Full width on mobile screens */
+        padding: 15px; /* Reduce padding for mobile */
+    }
+
+    .nav-main {
+        padding-top: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 50px;
+    }
+
+    .nav-address h1 {
+        font-size: 2rem; /* Smaller font size for mobile */
+        line-height: 2.5rem;
+    }
+
+    .nav-text {
+        font-size: 1rem;
+        margin-top: 5%;
+    }
+
+    .nav-num {
+        font-size: 1.8rem; /* Smaller for mobile */
+        margin-top: 5%;
+    }
+}
+
+/* Responsive styles */
+
+@media (max-width: 1200px) {
+    .back-text {
+        width: 80vw;      /* Adjusts width for smaller screens */
+        left: 10vw;       /* Centers better on medium screens */
+        top: 60vh;        /* Adjusts top spacing */
+        padding: 15px;    /* Keeps padding */
+    }
+
+    .back-text p {
+        left: 0;          /* Centers text in mobile view */
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .nav-logo img {
+        width: 100px;
+    }
+
+    .nav-links ul {
+        gap: 10px;
+        right: 60%;
+    }
+
+    .back-content h1 {
+        font-size: 45px;
+    }
+
+    .back-text {
+        width: 60%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: lightgrey;
+        z-index: 1000;
+        flex-direction: column; /* Stack elements vertically in mobile view */
+    }
+
+    .nav-logo img {
+        width: 80px;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: lightgrey;
+        width: 100%;
+        flex-direction: column; /* Show links vertically */
+        padding: 15px 0;
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links vertically when toggled */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Ensure list items are displayed in a column */
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0; /* Space each link in vertical layout */
+    }
+
+    .nav-button {
+        display: none; /* Hide Schedule Appointment button on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        cursor: pointer; /* Show pointer cursor on hover */
+    }
+
+    .back-content h1 {
+        font-size: 35px;
+    }
+
+    .back-text {
+        width: 90vw;      /* More compact width for small screens */
+        left: 8.5vw;        /* Centers horizontally */
+        top: 387px;        /* Aligns bottom */
+        bottom: 20px;     /* Adds bottom spacing */
+        height: 50%;     /* Adjusts height to content */
+        padding: 10px;    /* Reduces padding for a tight layout */
+    }
+
+    .back-text p {
+        font-size: 1rem; /* Resizes text for smaller screens */
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links ul li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .back-content h1 {
+        font-size: 28px;
+    }
+
+    .back-text {
+        width: 90%;
+        font-size: 0.75rem;
+    }
+}
+
+
+
+/* Responsive styles */
+
+@media (max-width: 1200px) {
+    .back-text {
+        width: 80vw;      /* Adjusts width for smaller screens */
+        left: 10vw;       /* Centers better on medium screens */
+        top: 60vh;        /* Adjusts top spacing */
+        padding: 15px;    /* Keeps padding */
+    }
+
+    .back-text p {
+        left: 0;          /* Centers text in mobile view */
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .nav-logo img {
+        width: 100px;
+    }
+
+    .nav-links ul {
+        gap: 10px;
+        right: 60%;
+    }
+
+    .back-content h1 {
+        font-size: 45px;
+    }
+
+    .back-text {
+        width: 60%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: lightgrey;
+        z-index: 1000;
+        flex-direction: column; /* Stack elements vertically in mobile view */
+    }
+
+    .nav-logo img {
+        width: 80px;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: lightgrey;
+        width: 100%;
+        flex-direction: column; /* Show links vertically */
+        padding: 15px 0;
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links vertically when toggled */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Ensure list items are displayed in a column */
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0; /* Space each link in vertical layout */
+    }
+
+    .nav-button {
+        display: none; /* Hide Schedule Appointment button on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        cursor: pointer; /* Show pointer cursor on hover */
+    }
+
+    .back-content h1 {
+        font-size: 35px;
+    }
+
+    .back-text {
+        width: 90vw;      /* More compact width for small screens */
+        left: 8.5vw;        /* Centers horizontally */
+        top: 387px;        /* Aligns bottom */
+        bottom: 20px;     /* Adds bottom spacing */
+        height: 50%;     /* Adjusts height to content */
+        padding: 10px;    /* Reduces padding for a tight layout */
+    }
+
+    .back-text p {
+        font-size: 1rem; /* Resizes text for smaller screens */
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links ul li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .back-content h1 {
+        font-size: 28px;
+    }
+
+    .back-text {
+        width: 90%;
+        font-size: 0.75rem;
+    }
+}
+
+
+
+
+/* Footer section */
+
+.footer{
+    background-color: #1C1C1C;
+}
+
+.footer-main{
+    color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding-top: 80px; /* Adds space above the content */
+    padding-bottom: 80px; /* Adds space below the content */
+
+}
+
+.footer-one img{
+    width: 30%;
+}
+
+.footer-link h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-link ul li{
+    list-style-type: none;
+}
+
+.footer-link ul li a{
+    text-decoration: none;
+    color: lightgray;
+    margin-top: 20px;
+}
+
+.reach-us h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.reach-us p{
+    margin-bottom: 10px;
+}
+
+.subscribe form{
+    margin-bottom: 30px;
+}
+
+.subscribe form input{
+    background-color: darkgray;
+    color: white;
+    padding: 10px 57px 10px 57px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+}
+
+.subscribe p{
+    margin-top: 20px;
+}
+
+.subscribe h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.sub-button{
+    background-color: white;
+    padding: 5px 100px 5px 100px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+}
+
+.sub-button a{
+    text-decoration: none;
+    color: lightgray;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .footer-main {
+        gap: 20px;
+    }
+
+    .footer-one img {
+        width: 40%;
+    }
+
+    .footer-link h5,
+    .reach-us h5,
+    .subscribe h5 {
+        font-size: 18px;
+    }
+
+    .subscribe form input {
+        padding: 10px 40px;
+    }
+
+    .sub-button {
+        padding: 5px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-one img {
+        width: 50%;
+    }
+
+    .footer-link h5,
+    .reach-us h5,
+    .subscribe h5 {
+        font-size: 16px;
+    }
+
+    .footer-link ul li {
+        margin-top: 10px;
+    }
+
+    .subscribe form input {
+        padding: 8px 30px;
+    }
+
+    .sub-button {
+        padding: 5px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 20px;
+    }
+
+    .footer-one img {
+        width: 60%;
+    }
+
+    .footer-link h5,
+    .reach-us h5,
+    .subscribe h5 {
+        font-size: 14px;
+    }
+
+    .subscribe form input {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .sub-button {
+        padding: 5px 40px;
+        font-size: 14px;
+    }
+}

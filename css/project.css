@@ -1,0 +1,673 @@
+/* Font face for local font */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+/* Navigation styling */
+
+/* Desktop (default) view */
+.hamburger {
+    display: none; /* Hide hamburger on desktop */
+}
+
+.navigation {
+    width: 100vw;
+    height: 80vh;
+    color: #1C1C1C;
+    margin: 0;
+    padding: 0;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightgrey;
+    height: 90px;
+    padding: 0 20px;
+}
+
+.nav-logo img {
+    width: 120px; /* Fixed width for better scaling */
+    position: relative;
+    top: 25%;
+    left: 20%;
+}
+
+.nav-links ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Spacing between links */
+}
+
+.nav-links ul li {
+    list-style-type: none;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    text-align: center;
+    font-weight: 500;
+}
+
+.nav-links ul li .active{
+    color: darkgrey;
+}
+
+.nav-button {
+    background-color: black;
+    width: 250px;
+    height: 45px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-button a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.nav-button h4 {
+    margin: 0;
+}
+
+
+/* navigation background */
+
+.nav-background {
+    position: absolute;
+    left: 13%;
+    top: 25%;
+    width: 60%;
+} 
+
+.back-content h3{
+    font-size: 3.5rem;
+    font-weight: 400;
+    line-height: 4rem;
+    margin-top: 10px;
+}
+
+.back-content p{
+    font-size: 1.3rem;
+    margin-top: 25px;
+}
+
+
+@media (max-width: 1024px) {
+    .nav-background {
+        left: 10%;
+        top: 20%;
+        width: 80%; /* Adjust width for better fit on tablets */
+    }
+
+    .back-content h3 {
+        font-size: 2.5rem; /* Slightly smaller font */
+        line-height: 3.2rem;
+    }
+
+    .back-content p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+}
+
+/* For mobile devices (screen width 767px and below) */
+@media (max-width: 767px) {
+    .nav-background {
+        left: 5%;
+        top: 15%;
+        width: 90%; /* Full width on mobile */
+    }
+
+    .back-content h3 {
+        font-size: 2rem; /* Smaller font for mobile screens */
+        line-height: 2.5rem;
+        margin-top: 5px;
+    }
+
+    .back-content p {
+        font-size: 1rem;
+        margin-top: 15px;
+    }
+}
+
+/* Responsive styles */
+
+@media (max-width: 1200px) {
+    .back-text {
+        width: 80vw;      /* Adjusts width for smaller screens */
+        left: 10vw;       /* Centers better on medium screens */
+        top: 60vh;        /* Adjusts top spacing */
+        padding: 15px;    /* Keeps padding */
+    }
+
+    .back-text p {
+        left: 0;          /* Centers text in mobile view */
+        text-align: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        justify-content: space-between;
+        padding: 0 10px;
+    }
+
+    .nav-logo img {
+        width: 100px;
+    }
+
+    .nav-links ul {
+        gap: 10px;
+        right: 60%;
+    }
+
+    .back-content h1 {
+        font-size: 45px;
+    }
+
+    .back-text {
+        width: 60%;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: lightgrey;
+        z-index: 1000;
+        flex-direction: column; /* Stack elements vertically in mobile view */
+    }
+
+    .nav-logo img {
+        width: 80px;
+    }
+
+    .nav-links {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: lightgrey;
+        width: 100%;
+        flex-direction: column; /* Show links vertically */
+        padding: 15px 0;
+        z-index: 999;
+    }
+
+    .nav-links.show {
+        display: flex; /* Show links vertically when toggled */
+    }
+
+    .nav-links ul {
+        flex-direction: column; /* Ensure list items are displayed in a column */
+        align-items: center;
+    }
+
+    .nav-links ul li {
+        margin: 10px 0; /* Space each link in vertical layout */
+    }
+
+    .nav-button {
+        display: none; /* Hide Schedule Appointment button on mobile */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        cursor: pointer; /* Show pointer cursor on hover */
+    }
+
+    .back-content h1 {
+        font-size: 35px;
+    }
+
+    .back-text {
+        width: 90vw;      /* More compact width for small screens */
+        left: 8.5vw;        /* Centers horizontally */
+        top: 387px;        /* Aligns bottom */
+        bottom: 20px;     /* Adds bottom spacing */
+        height: 50%;     /* Adjusts height to content */
+        padding: 10px;    /* Reduces padding for a tight layout */
+    }
+
+    .back-text p {
+        font-size: 1rem; /* Resizes text for smaller screens */
+        line-height: 1.4;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-links ul li {
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .back-content h1 {
+        font-size: 28px;
+    }
+
+    .back-text {
+        width: 90%;
+        font-size: 0.75rem;
+    }
+}
+
+
+/* Joyous home section */
+
+.Joyous{
+    background-color: #1C1C1C;
+    height: 90vh;
+    width: 100%;
+    color: white;
+}
+
+.joyous-content{
+    display: flex;
+    justify-content: space-between;
+    width: 45%;
+    position: relative;
+    left: 12%;
+    top: 15%;
+}
+
+
+.joyous-img a img{
+    width: 110%;
+    height: 60%;
+    height: 520px;
+}
+
+.joyous-text{
+    font-size: 1.3rem;
+}
+
+.joyous-text>p{
+    color: orange;
+}
+
+.joyous-text a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.joyous-text h1{
+    font-size: 3.5rem;
+    font-weight: 400;
+}
+
+.up-arrow img{
+    width: 25%;
+    margin-left: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .Joyous{
+        margin-top: 40%;
+    }
+
+
+    .joyous-content {
+        width: 80%; /* Increase width to fit better on tablets */
+        left: 10%; /* Adjust left position */
+        top: 20%; /* Adjust top position */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content */
+        text-align: center;
+    }
+
+    .joyous-text h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+
+    .joyous-text {
+        font-size: 1.1rem; /* Slightly smaller font */
+    }
+
+    .joyous-img a img {
+        width: 100%; /* Full width for better fit */
+        height: auto;
+        max-height: 400px; /* Limit image height */
+    }
+
+    .up-arrow img {
+        width: 20%; /* Adjust arrow size */
+        margin-left: 0; /* Center align if necessary */
+    }
+}
+
+/* For mobile devices (screen width 767px and below) */
+@media (max-width: 767px) {
+    .Joyous{
+        margin-top: 30%;
+    }
+
+    
+    .joyous-content {
+        width: 90%;
+        left: 5%; /* Adjust left position */
+        top: 15%; /* Adjust top position */
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .joyous-text h1 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+    .joyous-text {
+        font-size: 1rem;
+    }
+
+    .joyous-img a img {
+        width: 100%;
+        height: auto;
+        max-height: 300px; /* Further limit image height for mobile */
+    }
+
+    .joyous-text a {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    .up-arrow img {
+        width: 15%; /* Smaller arrow for mobile */
+        margin-left: 0;
+    }
+}
+
+/* Connect section content */
+
+.connection {
+    background-color: #FFF29C;
+    width: 100%;
+    height: auto;
+    padding-top: 80px; /* Adds space above the content */
+    padding-bottom: 80px; /* Adds space below the content */
+}
+
+.connect {
+    text-align: center;
+    margin-top: 0; /* Remove extra top margin */
+}
+
+.connect h5 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-top: 0; /* Reset to prevent overlap with padding */
+    margin-bottom: 20px;
+}
+
+.connect .con-text {
+    margin-bottom: 45px;
+}
+
+.connect img {
+    width: 20%;
+    margin-bottom: 30px;
+}
+
+.connect .con-num {
+    font-size: 3.5rem;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .connect img {
+        width: 50%; /* Increase image size on medium screens */
+    }
+    
+    .connect .con-num {
+        font-size: 3rem; /* Slightly reduce font size for phone numbers */
+    }
+}
+
+@media (max-width: 768px) {
+    .connect h5 {
+        font-size: 2rem; /* Reduce heading font size */
+    }
+    
+    .connect .con-text {
+        font-size: 1.6rem; /* Adjust text size */
+        margin-bottom: 35px;
+    }
+
+    .connect img {
+        width: 60%; /* Further increase image size on smaller screens */
+    }
+
+    .connect .con-num {
+        font-size: 2.5rem; /* Reduce font size for better fit */
+    }
+}
+
+@media (max-width: 480px) {
+    .connect h5 {
+        font-size: 1.8rem; /* Further reduce heading font size for small screens */
+    }
+
+    .connect .con-text {
+        font-size: 1.4rem;
+        margin-bottom: 25px;
+    }
+
+    .connect img {
+        width: 70%; /* Maximum increase for mobile screens */
+    }
+
+    .connect .con-num {
+        font-size: 2rem; /* Final reduction for mobile */
+    }
+}
+
+
+/* Footer section */
+
+.footer{
+    background-color: #1C1C1C;
+}
+
+.footer-main{
+    color: lightgray;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    padding-top: 80px; /* Adds space above the content */
+    padding-bottom: 80px; /* Adds space below the content */
+
+}
+
+.footer-one img{
+    width: 30%;
+}
+
+.footer-link h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-link ul li{
+    list-style-type: none;
+}
+
+.footer-link ul li a{
+    text-decoration: none;
+    color: lightgray;
+    margin-top: 20px;
+}
+
+.reach-us h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.reach-us p{
+    margin-bottom: 10px;
+}
+
+.subscribe form{
+    margin-bottom: 30px;
+}
+
+.subscribe form input{
+    background-color: darkgray;
+    color: white;
+    padding: 10px 57px 10px 57px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+}
+
+.subscribe p{
+    margin-top: 20px;
+}
+
+.subscribe h5{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.sub-button{
+    background-color: white;
+    padding: 5px 100px 5px 100px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+}
+
+.sub-button a{
+    text-decoration: none;
+    color: lightgray;
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .footer-main {
+        gap: 20px;
+    }
+
+    .footer-one img {
+        width: 40%;
+    }
+
+    .footer-link h5,
+    .reach-us h5,
+    .subscribe h5 {
+        font-size: 18px;
+    }
+
+    .subscribe form input {
+        padding: 10px 40px;
+    }
+
+    .sub-button {
+        padding: 5px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .footer-one img {
+        width: 50%;
+    }
+
+    .footer-link h5,
+    .reach-us h5,
+    .subscribe h5 {
+        font-size: 16px;
+    }
+
+    .footer-link ul li {
+        margin-top: 10px;
+    }
+
+    .subscribe form input {
+        padding: 8px 30px;
+    }
+
+    .sub-button {
+        padding: 5px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-main {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        gap: 20px;
+    }
+
+    .footer-one img {
+        width: 60%;
+    }
+
+    .footer-link h5,
+    .reach-us h5,
+    .subscribe h5 {
+        font-size: 14px;
+    }
+
+    .subscribe form input {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+
+    .sub-button {
+        padding: 5px 40px;
+        font-size: 14px;
+    }
+}

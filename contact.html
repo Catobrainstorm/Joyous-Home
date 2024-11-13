@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/contact.css">
+    <title>Contacts</title>
+</head>
+<body>
+        <!-- Navigation bar -->
+        <section class="navigation">
+            <div class="nav">
+                <div class="nav-logo">
+                    <img src="./assets/Logo.png" alt="">
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+                <div class="nav-links">
+                    <ul>
+                        <li>
+                            <a href="home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="about.html">About</a>
+                        </li>
+                        <li>
+                            <a href="projects.html">Projects</a>
+                        </li>
+                        <li>
+                            <a class="active" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-button">
+                    <span><a href="#"><h4>Schedule Appointment</h4></a></span>
+                </div>
+            </div>
+    
+            <div class="nav-background">
+                <div class="nav-main">
+                    <div class="nav-address">
+                        <h1>
+                            Plot G, Ziatech Road, Oregun, Ikeja, Lagos State.
+                        </h1>
+                    </div>
+                    <div class="nav-text">
+                        <p>
+                            Email: joyoushomespremium@gmail.com
+                        </p>
+                        <p>
+                            Call Directly :
+                        </p>
+                    </div>
+                    <div class="nav-num">
+                        <p>+234 803 453 7085</p>
+                        <p>+234 808 174 5570</p>
+                    </div>
+                    <div class="nav-btn">
+                        <span>
+                            <a href="#">
+                                Get in Touch
+                            </a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <section class="footer">
+        <div class="footer-main">
+            <div class="footer-one">
+                <img src="./assets/logo-white.png" alt="">
+                <p>
+                    Redefining Modern Living Luxury | Innovation | Sustainability
+                </p>
+            </div>
+            <div class="footer-link">
+                <h5>
+                    Quick Links
+                </h5>
+                <ul>
+                    <li>
+                        <a class="active" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="reach-us">
+                <h5>
+                    Reach us
+                </h5>
+                <p>
+                    Plot G,Ziatech Road, Oregun, Ikeja, Lagos State
+                </p>
+                <p>
+                    joyoushomespremium@gmail.com
+                </p>
+    
+                <p>
+                    +234 803 453 7085
+                </p>
+                <p>
+                    +234 808 174 5570
+                </p>
+            </div>
+    
+            <div class="subscribe">
+                <h5>Subscribe to newsletter</h5>
+                <form action="">
+                    <input type="email" name="Email Address" id="" placeholder="Email Address">
+                </form>
+                <span class="sub-button">
+                    <a href="#"> Subscribe</a>
+                </span>
+    
+                <p>
+                    Always be the first to know, sign up for our weekly newsletter!
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <hr>
+            <p>Copyright</p>
+        </div>
+    </section>
+
+
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+
+</body>
+</html>

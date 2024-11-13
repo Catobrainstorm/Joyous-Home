@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/about.css">
+    <title>About</title>
+</head>
+<body>
+    
+    <!-- Navigation bar -->
+    <section class="navigation">
+        <div class="nav">
+            <div class="nav-logo">
+                <img src="./assets/Logo.png" alt="">
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+            <div class="nav-links">
+                <ul>
+                    <li>
+                        <a href="home.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="active" href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <span><a href="#"><h4>Schedule Appointment</h4></a></span>
+            </div>
+        </div>
+
+        <div class="nav-background">
+            <div class="back-year">
+                <h5>ABOUT US</h5>
+            </div>
+            <div class="back-content">
+                <h3>Redefining Modern Living with State-of-the-Art Homes.</h3>
+                <p>We see a home as a blend of comfort, innovation, and style, creating exceptional living experiences. Our modern architecture and advanced design reflect the aspirations of today’s discerning homeowners.</p>
+            </div>
+
+            <div class="back-button">
+                <a href=""><img src="./assets/project-two.png" alt=""></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About us part -->
+    
+    <section class="about">
+
+        <div class="about-content">
+            <h6>
+                At Joyous Homes, we are redefining the future of modern living. Our passion lies in creating state-of-the-art, innovative homes that merge luxury with sustainable design.
+            </h6>
+
+            <div class="about-text">
+                <div class="about-one">
+                    <a href="about.html"><img  src="./assets/pic-two.png" alt=""></a>
+                </div>
+
+                <div class="about-text-one">
+                    <p>
+                
+                        With a commitment to excellence, we focus on delivering high-quality craftsmanship, smart technologies, and customer-centric solutions. Our homes are designed to not only meet but exceed the expectations of our clients, fostering spaces where comfort, functionality, and elegance come together seamlessly.
+                    </p>
+                    <div class="about-three">
+                        <img src="./assets/pic-one.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="connection">
+        <div class="connect">
+            <h5>
+                Let’s connect and <br> collaborate
+            </h5>
+            <p class="con-text">
+                Contact us today, and let's start creating the space you've imagined. <br> We're here to guide you from design to construction.
+            </p>
+
+            <a href="http://joyoushomespremium@gmail.com"><img src="./assets/Link.png" alt=""></a>
+            
+            <p class="con-num">
+                +234 803 453 7085
+            </p>
+            <p class="con-num">
+                +234 808 174 5570
+            </p>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="footer-main">
+            <div class="footer-one">
+                <img src="./assets/logo-white.png" alt="">
+                <p>
+                    Redefining Modern Living Luxury | Innovation | Sustainability
+                </p>
+            </div>
+            <div class="footer-link">
+                <h5>
+                    Quick Links
+                </h5>
+                <ul>
+                    <li>
+                        <a class="active" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="reach-us">
+                <h5>
+                    Reach us
+                </h5>
+                <p>
+                    Plot G,Ziatech Road, Oregun, Ikeja, Lagos State
+                </p>
+                <p>
+                    joyoushomespremium@gmail.com
+                </p>
+    
+                <p>
+                    +234 803 453 7085
+                </p>
+                <p>
+                    +234 808 174 5570
+                </p>
+            </div>
+    
+            <div class="subscribe">
+                <h5>Subscribe to newsletter</h5>
+                <form action="">
+                    <input type="email" name="Email Address" id="" placeholder="Email Address">
+                </form>
+                <span class="sub-button">
+                    <a href="#"> Subscribe</a>
+                </span>
+    
+                <p>
+                    Always be the first to know, sign up for our weekly newsletter!
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <hr>
+            <p>Copyright</p>
+        </div>
+    </section>
+
+
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
