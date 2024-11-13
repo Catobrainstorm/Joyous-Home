@@ -224,6 +224,7 @@ a:hover{
 @media (max-width: 768px) {
     .nav {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px;
@@ -235,8 +236,19 @@ a:hover{
         flex-direction: column; /* Stack elements vertically in mobile view */
     }
 
+    .nav-logo{
+        order: 1;
+    }
+
+
     .nav-logo img {
         width: 80px;
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+        cursor: pointer; /* Show pointer cursor on hover */
+        order: 2;
     }
 
     .nav-links {
@@ -249,6 +261,7 @@ a:hover{
         flex-direction: column; /* Show links vertically */
         padding: 15px 0;
         z-index: 999;
+        order: 3;
     }
 
     .nav-links.show {
@@ -265,13 +278,14 @@ a:hover{
     }
 
     .nav-button {
-        display: none; /* Hide Schedule Appointment button on mobile */
+        display: none;
     }
 
-    .hamburger {
-        display: block; /* Show hamburger on mobile */
-        cursor: pointer; /* Show pointer cursor on hover */
+    .nav-button.show {
+        display: flex;
+        order: 4;
     }
+
 
     .back-content h1 {
         font-size: 35px;
